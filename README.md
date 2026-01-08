@@ -27,6 +27,30 @@ A pet project — simple audio bypass with acceptable latency and the ability to
 - Effects written in Go — no DSLs, no intermediate layers
 - Switch between any available system input/output audio devices on the fly
 
+## Requirements
+
+PortAudio is required for audio I/O.
+
+### macOS
+
+```bash
+brew install portaudio
+```
+
+### Ubuntu/Debian
+
+```bash
+sudo apt install libportaudio2 libportaudio-dev
+```
+
+### Windows
+
+```powershell
+choco install portaudio
+```
+
+Or download prebuilt binaries from [portaudio.com](https://files.portaudio.com/download.html).
+
 ## Building
 
 ```bash
