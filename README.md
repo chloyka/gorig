@@ -40,7 +40,7 @@ brew install portaudio
 ### Ubuntu/Debian
 
 ```bash
-sudo apt install libportaudio2 libportaudio-dev
+sudo apt install portaudio19-dev
 ```
 
 ### Windows
