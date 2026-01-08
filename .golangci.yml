@@ -1,0 +1,27 @@
+linters:
+  enable:
+    - depguard
+  disable:
+    - unused
+
+linters-settings:
+  depguard:
+    rules:
+      zap-forbidden:
+        list-mode: lax
+        files:
+          - "!**/internal/logger/**/*.go"
+          - "!**/internal/logger/*.go"
+        deny:
+          - pkg: "go.uber.org/zap"
+            desc: "Use internal/logger/keys package for log fields. Direct zap usage is only allowed in internal/logger/"
+      fmt-forbidden:
+        list-mode: lax
+        files:
+          - "!**/internal/logger/**/*.go"
+          - "!**/internal/logger/*.go"
+          - "!**/utils/**/*.go"
+          - "!**/utils/*.go"
+        deny:
+          - pkg: "fmt"
+            desc: "Use utils/errors package for error handling. Direct fmt usage is only allowed in internal/logger/ and utils/"

@@ -1,0 +1,40 @@
+// Gorig Configuration Example
+// Copy this file to config.jsonc to customize settings.
+// All values shown are defaults - you only need to specify values you want to change.
+{
+  "audio": {
+    "sample_rate": 44100,
+    "frames_per_buffer": 64,
+    "num_channels": 1,
+    "target_latency": "10ms"
+  },
+  "logger": {
+    "max_log_files": 30,
+    // Directory for log files (default: "./logs")
+    "logs_dir": "./logs",
+    // Buffer size in bytes for async writes (default: 262144 = 256KB)
+    "buffer_size": 262144,
+    // Flush interval for buffered writes (default: 1s)
+    "flush_interval": "1s",
+    // Log level: debug, info, warn, error, fatal (default: "debug")
+    "level": "debug"
+  },
+  "effects": {
+    "effects_dir": "./effects"
+  },
+  "state": {
+    "input_device": "",
+    // Saved output device name (empty = system default)
+    "output_device": "",
+    // Whether effects chain is enabled (default: true)
+    "effects_enabled": true
+  },
+  "presets": {
+    "active_preset": "",
+    "presets": []
+    // Example presets:
+    // "presets": [
+    //   {"name": "Heavy", "effect_chain": ["simple distortion"]}
+    // ]
+  }
+}
